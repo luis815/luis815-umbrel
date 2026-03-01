@@ -5,7 +5,7 @@ services:
   app_proxy:
     environment:
       # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: luis815-umbrel_open-webui-amd_1
+      APP_HOST: luis815-umbrel-open-webui-amd_luis815-umbrel-open-webui-amd_1
       APP_PORT: 8080
       PROXY_AUTH_ADD: 'false'
   luis815-umbrel-open-webui-amd:
