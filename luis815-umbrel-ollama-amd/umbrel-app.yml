@@ -4,7 +4,7 @@ name: Ollama AMD
 tagline: Self-host open source AI models like DeepSeek-R1, Llama, and more
 icon: https://raw.githubusercontent.com/luis815/luis815-umbrel-personal-app-store/master/luis815-umbrel-ollama-amd/icon.jpg
 category: ai
-version: "0.17.4-rocm"
+version: "0.17.4"
 port: 11434
 description: >-
   Ollama allows you to download and run advanced AI models directly on your own hardware. Self-hosting AI models ensures full control over your data and protects your privacy.
@@ -47,3 +47,5 @@ dependencies: []
 path: ""
 defaultUsername: ""
 defaultPassword: ""
+permissions:
+  - GPU
