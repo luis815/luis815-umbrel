@@ -14,9 +14,6 @@ services:
       OLLAMA_ORIGINS: '*'
       OLLAMA_CONTEXT_LENGTH: 8192
       HSA_OVERRIDE_GFX_VERSION: '10.3.0'
-    group_add:
-      - video
-      - render
     volumes:
       - ${APP_DATA_DIR}/data:/root/.ollama
     devices:
