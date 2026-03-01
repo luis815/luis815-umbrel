@@ -14,6 +14,8 @@ services:
       OLLAMA_ORIGINS: '*'
       OLLAMA_CONTEXT_LENGTH: 8192
       HSA_OVERRIDE_GFX_VERSION: '9.0.10'
+      OLLAMA_VRAM_OVERRIDE: 8589934592
+      GPU_MAX_ALLOC_PERCENT: 100
     group_add:
       - "44"
       - "991"
