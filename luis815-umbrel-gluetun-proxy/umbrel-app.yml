@@ -4,7 +4,7 @@ name: Gluetun Proxy
 tagline: VPN proxy with HTTP/HTTPS forwarding and status monitoring
 icon: https://raw.githubusercontent.com/luis815/luis815-umbrel-personal-app-store/master/luis815-umbrel-gluetun-proxy/icon.svg
 category: networking
-version: "3.0.0"
+version: "3.0.1"
 port: 2604
 description: >-
   Gluetun Proxy provides a secure VPN tunnel with built-in HTTP/HTTPS forwarding capabilities. This app includes a status page to monitor VPN and proxy connectivity in real-time.

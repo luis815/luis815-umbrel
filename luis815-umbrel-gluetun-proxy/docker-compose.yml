@@ -11,7 +11,6 @@ services:
 
   vpn:
     image: qmcgaw/gluetun:v3
-    container_name: vpn
     cap_add:
       - NET_ADMIN
     devices:
@@ -35,7 +34,6 @@ services:
 
   status-page:
     image: nginx:1.29.8-alpine
-    container_name: vpn-status
     network_mode: "service:vpn"
     command: >
       /bin/sh -c "
