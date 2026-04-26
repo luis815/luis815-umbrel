@@ -24,11 +24,6 @@ services:
       - OPENVPN_PASSWORD_SECRETFILE=/run/secrets/vpn_pass
       # HTTP PROXY 8888
       - HTTPPROXY=on
-      # SOCKS5 PROXY 1080
-      - SOCKS5=on
-      - SOCKS5_LOG=on
-      - SOCKS5_PORT=1080
-      - SOCKS5_LISTENING_ADDRESS=:1080
       # CONTROL SERVER
       - HTTP_CONTROL_SERVER_ADDRESS=:8000
     volumes:
