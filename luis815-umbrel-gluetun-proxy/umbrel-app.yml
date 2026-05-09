@@ -2,7 +2,7 @@ manifestVersion: 1
 id: luis815-umbrel-gluetun-proxy
 name: Gluetun Proxy
 tagline: VPN proxy with HTTP/HTTPS forwarding and status monitoring
-icon: https://raw.githubusercontent.com/luis815/luis815-umbrel-personal-app-store/master/luis815-umbrel-gluetun-proxy/icon.svg
+icon: https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-gluetun-proxy/icon.svg
 category: networking
 version: "3.0.5"
 port: 2604
@@ -45,9 +45,9 @@ submission: https://github.com/luis815/luis815-umbrel-personal-app-store
 repo: https://github.com/qdm12/gluetun
 support: https://github.com/qdm12/gluetun/issues
 gallery:
-  - https://raw.githubusercontent.com/luis815/luis815-umbrel-personal-app-store/master/luis815-umbrel-gluetun-proxy/1.jpg
-  - https://raw.githubusercontent.com/luis815/luis815-umbrel-personal-app-store/master/luis815-umbrel-gluetun-proxy/2.jpg
-  - https://raw.githubusercontent.com/luis815/luis815-umbrel-personal-app-store/master/luis815-umbrel-gluetun-proxy/3.jpg
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-gluetun-proxy/1.jpg
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-gluetun-proxy/2.jpg
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-gluetun-proxy/3.jpg
 releaseNotes: >-
   Initial release of Gluetun Proxy for Umbrel with integrated status monitoring.
 dependencies: []

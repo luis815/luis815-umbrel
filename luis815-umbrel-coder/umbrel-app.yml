@@ -2,7 +2,7 @@ manifestVersion: 1
 id: luis815-umbrel-coder
 name: Coder
 tagline: Self-hosted development environments in your browser
-icon: https://raw.githubusercontent.com/luis815/luis815-umbrel-personal-app-store/master/luis815-umbrel-coder/icon.svg
+icon: https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-coder/icon.svg
 category: productivity
 version: "2.17.0"
 port: 7080
@@ -50,9 +50,9 @@ submission: https://github.com/luis815/luis815-umbrel-personal-app-store
 repo: https://github.com/coder/coder
 support: https://github.com/coder/coder/issues
 gallery:
-  - https://raw.githubusercontent.com/luis815/luis815-umbrel-personal-app-store/master/luis815-umbrel-coder/1.jpg
-  - https://raw.githubusercontent.com/luis815/luis815-umbrel-personal-app-store/master/luis815-umbrel-coder/2.jpg
-  - https://raw.githubusercontent.com/luis815/luis815-umbrel-personal-app-store/master/luis815-umbrel-coder/3.jpg
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-coder/1.jpg
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-coder/2.jpg
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-coder/3.jpg
 releaseNotes: >-
   Initial release of Coder for Umbrel with integrated PostgreSQL database and Docker socket support.
 dependencies: []

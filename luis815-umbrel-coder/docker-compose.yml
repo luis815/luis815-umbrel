@@ -8,6 +8,28 @@ services:
       APP_HOST: luis815-umbrel-coder_coder_1
       APP_PORT: 7080
       PROXY_AUTH_ADD: 'false'
+    devices:
+      - /dev/dri
+
+  docker:
+    image: docker:27.2.0-dind@sha256:f9f72ad901a78f27be922b2d320bbc263174f12919c1b37e6a01f828fa904565
+    privileged: true
+    network_mode: host
+    stop_grace_period: 1m
+    restart: on-failure
+    environment:
+      DOCKER_ENSURE_BRIDGE: dind0:10.32.0.1/16
+    command: |
+      dockerd
+        --bridge dind0
+        --data-root /data/data
+        --exec-root /data/exec
+        --host unix:///data/docker.sock
+        --pidfile /data/docker.pid
+    volumes:
+      - ${APP_DATA_DIR}/data/docker:/data
+    devices:
+      - /dev/dri
 
   coder:
     image: ghcr.io/coder/coder:latest
@@ -18,12 +40,15 @@ services:
       CODER_HTTP_ADDRESS: "0.0.0.0:7080"
       CODER_ACCESS_URL: "${CODER_ACCESS_URL:-http://umbrel.local:7080}"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ${APP_DATA_DIR}/home:/home/coder
+      - ${APP_DATA_DIR}/data/docker:/var/run
+      - ${APP_DATA_DIR}/data/coder:/home/coder
     depends_on:
       database:
         condition: service_healthy
     restart: on-failure
+    devices:
+      - /dev/dri
+      - /dev/dri
 
   database:
     image: postgres:17
@@ -32,7 +57,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
       POSTGRES_DB: ${POSTGRES_DB:-coder}
     volumes:
-      - ${APP_DATA_DIR}/data:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
     healthcheck:
       test:
         [
@@ -43,3 +68,5 @@ services:
       timeout: 5s
       retries: 5
     restart: on-failure
+    devices:
+      - /dev/dri
