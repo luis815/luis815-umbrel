@@ -4,7 +4,7 @@ name: Coder
 tagline: Self-hosted development environments in your browser
 icon: https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-coder/icon.svg
 category: productivity
-version: "2.34.3"
+version: "2.29.18"
 port: 7080
 description: >-
   Coder is a self-hosted platform that allows developers to access a development environment directly from their browser. It provides a seamless way to set up, access, and manage development workspaces.
