@@ -1,0 +1,55 @@
+manifestVersion: 1
+id: luis815-umbrel-dev-env
+name: Dev Environment
+tagline: Web-based development environment with VS Code and OpenCode
+icon: https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-dev-env/icon.svg
+category: development
+version: "0.0.3"
+port: 4096
+gallery:
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-dev-env/1.jpg
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-dev-env/2.jpg
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-dev-env/3.jpg
+description: >-
+  Dev Environment is a containerized development workspace that provides web-based code editing and remote development capabilities.
+
+
+  **Features:**
+
+  - OpenCode Web: Browser-based code editor accessible on port 4096
+  - VS Code Tunnel: Remote VS Code access through secure tunnels
+  - Pre-configured Development Tools: Git, VS Code CLI, OpenCode, and Proto version manager
+  - Persistent Project Storage: All projects stored in /home/umbrel/projects
+
+
+  **Services:**
+
+  - **OpenCode Web**: Web-based code editor interface (http://umbrel.local:4096)
+  - **VS Code Tunnel**: Remote access to VS Code (`code tunnel --accept-server-license-terms`)
+
+
+  **Setup Instructions:**
+
+  1. After starting the app, access OpenCode at http://umbrel.local:4096 (or your device IP:4096)
+  2. For VS Code Tunnel access, connect via the tunnel mechanism provided by the service
+  3. Your projects are stored in the persistent /home/umbrel/projects directory
+  4. All development tools (Git, Proto, etc.) are pre-installed and ready to use
+
+
+  **Environment Variables:**
+
+  - `OPENCODE_PORT`: Port for OpenCode Web (default: 4096)
+  - `OPENCODE_HOSTNAME`: Hostname for OpenCode to bind to (default: 0.0.0.0)
+
+
+  ⚠️ **Note:** This is a development environment. Ensure proper security measures when exposing this service externally.
+developer: Luis Lopez Cardona
+website: https://github.com/luis815/coder-env
+submitter: luis815
+submission: https://github.com/luis815/luis815-umbrel
+repo: https://github.com/luis815/coder-env
+support: https://github.com/luis815/coder-env/issues
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
