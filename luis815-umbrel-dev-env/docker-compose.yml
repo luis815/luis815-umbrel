@@ -8,11 +8,12 @@ services:
       APP_PORT: 4096
 
   server:
-    image: ghcr.io/luis815/coder-env:v0.0.4
+    image: ghcr.io/luis815/coder-env:v0.0.5
     user: "1000:1000"
     environment:
       OPENCODE_PORT: 4096
       OPENCODE_HOSTNAME: 0.0.0.0
+      CODE_TUNNEL_NAME: "umbrel-dev-env-server-1"
     volumes:
       - ${APP_DATA_DIR}/data/projects:/home/umbrel/projects
     restart: on-failure

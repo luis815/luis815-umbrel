@@ -4,7 +4,7 @@ name: Dev Environment
 tagline: Web-based development environment with VS Code and OpenCode
 icon: https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-dev-env/icon.svg
 category: development
-version: "0.0.4"
+version: "0.0.5"
 port: 4096
 gallery:
   - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-dev-env/1.jpg
