@@ -10,9 +10,8 @@ services:
   server:
     image: ghcr.io/luis815/coder-env:v0.0.5
     environment:
-      - PUID=1000
-      - PGID=1000
-    environment:
+      PUID: 1000
+      PGID: 1000
       OPENCODE_PORT: 4096
       OPENCODE_HOSTNAME: 0.0.0.0
       CODE_TUNNEL_NAME: "umbrel"
