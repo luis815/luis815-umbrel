@@ -8,7 +8,7 @@ services:
       APP_PORT: 4096
 
   server:
-    image: ghcr.io/luis815/coder-env:v0.0.3
+    image: ghcr.io/luis815/coder-env:v0.0.4
     user: "1000:1000"
     environment:
       OPENCODE_PORT: 4096
