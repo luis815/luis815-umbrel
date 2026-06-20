@@ -1,0 +1,65 @@
+manifestVersion: 1
+id: luis815-umbrel-vs-opencode
+name: VS Code + OpenCode
+tagline: Web-based development environment with VS Code and OpenCode
+icon: https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-vs-opencode/icon.svg
+category: development
+version: "0.0.6"
+port: 4096
+gallery:
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-vs-opencode/1.jpg
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-vs-opencode/2.jpg
+  - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-vs-opencode/3.jpg
+description: >-
+  A containerized development environment that runs VS Code Tunnel and OpenCode Web simultaneously inside a Fedora 44 Docker container.
+
+
+  **Overview:**
+
+  This project sets up a complete development environment with:
+  - **VS Code Tunnel**: Remote VS Code access via `code tunnel`
+  - **OpenCode Web**: Web-based code editor interface accessible on port 4096
+  - **Proto**: Multi-language version manager for runtime and tool management
+  - **Simple Process Management**: Both services run concurrently via a bash entrypoint script
+
+
+  **Services:**
+
+  - **VS Code Tunnel**: Provides remote access to VS Code through secure tunnels. Command: `code tunnel --name "$CODE_TUNNEL_NAME" --accept-server-license-terms`. Tunnel name configurable via `CODE_TUNNEL_NAME` (default: `vs-opencode`).
+  - **OpenCode Web**: Web-based code editor accessible in your browser at http://umbrel.local:4096. Command: `opencode web --hostname $OPENCODE_HOSTNAME --port $OPENCODE_PORT`.
+
+
+  **Architecture:**
+
+  - **Base Image:** Fedora 44
+  - **Process Manager:** Bash entrypoint script with background processes (`wait` for both)
+  - **Non-root User:** vsopencode (passwordless sudo via `wheel` group)
+  - **Working Directory:** `/home/vsopencode`
+  - **Installed Tools (build-time):** Git, tar, unzip, gzip, xz, curl, sudo, which, vim, nano, jq, iputils, wget, procps-ng, tree, VS Code CLI
+  - **Installed Tools (runtime via entrypoint):** OpenCode and Proto (installed on first run if missing; persist across container updates when home directory is bind-mounted)
+
+
+  **Environment Variables:**
+
+  - `OPENCODE_PORT`: Port for OpenCode Web (default: 4096)
+  - `OPENCODE_HOSTNAME`: Hostname/IP for OpenCode Web to bind to (default: 0.0.0.0)
+  - `CODE_TUNNEL_NAME`: Name for VS Code Tunnel (default: vs-opencode)
+
+
+  **Port Mappings:**
+
+  - **4096** (default): OpenCode Web interface
+  - **VS Code Tunnel**: Uses its own connection mechanism for remote access
+
+
+  ⚠️ **Note:** This is a development environment. Ensure proper security measures when exposing this service externally.
+developer: Luis Lopez Cardona
+website: https://github.com/luis815/vs-opencode
+submitter: luis815
+submission: https://github.com/luis815/luis815-umbrel
+repo: https://github.com/luis815/vs-opencode
+support: https://github.com/luis815/vs-opencode/issues
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
