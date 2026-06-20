@@ -4,7 +4,7 @@ name: VS OpenCode
 tagline: Web-based development environment with VS Code and OpenCode
 icon: https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-vs-opencode/icon.svg
 category: development
-version: "0.0.6"
+version: "0.0.7"
 port: 4096
 gallery:
   - https://raw.githubusercontent.com/luis815/luis815-umbrel/master/luis815-umbrel-vs-opencode/1.jpg
